@@ -3,8 +3,8 @@
 int main() {
     
     // variaveis da primeira carta
-    char estado[40]; // letra + terminador
-    char codigo[5]; // ex: A01 + terminador
+    char estado[40]; // estado onde está localizado a cidade
+    char codigo[5]; // ex: A01
     char cidade[40];
     int populacao;
     float area;
@@ -12,8 +12,8 @@ int main() {
     int pontosT; //significa Pontos turísticos
 
     // segunda carta
-    char estado2[40]; // letra + terminador
-    char codigo2[5]; // ex: A01 + terminador
+    char estado2[40]; // estado onde está localizado a cidade
+    char codigo2[5]; // ex: A01
     char cidade2[40];
     int populacao2;
     float area2;
@@ -82,6 +82,8 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f bilhões de reais\n", PIB);
     printf("Pontos turísticos: %d\n", pontosT);
+
+    //informações da segunda carta
 
       printf("\n--- Carta 2 cadastrada ---\n");
     printf("Estado: %s\n", estado2);
