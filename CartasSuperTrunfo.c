@@ -23,7 +23,7 @@ int main() {
     //aqui vamos começar o cadastro das cartas
     printf("Olá, bem-vindo ao jogo Super Trunfo.\n");
     printf("Começaremos cadastrando as cartas para seu jogo.\n");
-    printf("Vamos começar pela Carta 1 \n");
+    printf("\n--- Vamos começar pela Carta 1 ---\n");
 
 
     printf("Estado onde está localizado a cidade: ");
@@ -49,7 +49,7 @@ int main() {
 
     //vamos cadastrar a segunda carta
     
-    printf("Agora forneça as informações da segunda carta: \n");
+    printf("\n--- Agora forneça as informações da segunda carta: ---\n");
 
     printf("Estado onde está localizado a cidade: ");
     scanf(" %s", estado2); 
@@ -102,6 +102,20 @@ int main() {
     printf("Pontos turísticos: %d\n", pontosT2);
     printf("Densidade populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per capita: %.2f reais\n", PIBpc2);
+
+    //Agora vamos ver a carta vencedora
+    float superpoder = (float) populacao + area + PIB + (float) pontosT + PIBpc - densidade;
+    float superpoder2 = (float) populacao2 + area2 + PIB2 + (float) pontosT2 + PIBpc2 - densidade2;
+
+    printf("\n--- Vamos calcular a pontuação --- \n");
+    printf("População: Carta 1 vence (%d)\n", populacao > populacao2 );
+    printf("Área: Carta 1 vence (%d)\n", area > area2);
+    printf("PIB: Carta 1 vence (%d)\n", PIB > PIB2);
+    printf("Pontos turísticos: Carta 1 vence (%d)\n", pontosT > pontosT2 );
+    printf("Densidade populacional: Carta 1 vence (%d)\n", densidade < densidade2 );
+    printf("PIB per capita: Carta 1 vence (%d)\n", PIBpc > PIBpc2);
+    printf("Super Poder: Carta 1 vence (%d)\n", superpoder > superpoder2);
+  
 
     return 0;
 }
